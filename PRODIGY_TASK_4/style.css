@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.form input[type="text"] {
+  padding: 12px 15px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #333;
+  transition: 0.3s;
+}
+
+.form input[type="text"]::placeholder {
+  color: #777;
+}
+
+button {
+  display: inline-block;
+  margin: 6px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.4s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #764ba2, #667eea);
+}
+
+.location-btn {
+  background: linear-gradient(to right, #43cea2, #185a9d);
+}
+
+.location-btn:hover {
+  background: linear-gradient(to right, #185a9d, #43cea2);
+}
+
+.output {
+  margin-top: 25px;
+  font-size: 17px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
