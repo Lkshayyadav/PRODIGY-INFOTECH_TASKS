@@ -3,10 +3,9 @@ const cityInput = document.getElementById("city-input");
 const useLocationBtn = document.getElementById("use-location");
 const outputDiv = document.getElementById("weather-output");
 
-// 🔐 Replace this with your actual API key
-const API_KEY = "f9a7287f2ba7d123f4b0546d311f90e7"; // ← Add your OpenWeatherMap API key here
 
-// 📍 Submit: Search by city name
+const API_KEY = "your api keys"; 
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const city = cityInput.value.trim();
@@ -23,7 +22,7 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-// 📌 Get weather by geolocation
+
 useLocationBtn.addEventListener("click", () => {
   if (!API_KEY) {
     outputDiv.innerHTML = `<p>⚠️ Please add your API key in <code>script.js</code>.</p>`;
@@ -45,19 +44,18 @@ useLocationBtn.addEventListener("click", () => {
   }
 });
 
-// 🌆 Fetch weather by city name
 function fetchWeatherByCity(city) {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&units=metric&appid=${API_KEY}`;
   fetchWeather(url);
 }
 
-// 🌍 Fetch weather by coordinates
+
 function fetchWeatherByCoords(lat, lon) {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
   fetchWeather(url);
 }
 
-// 🔁 Universal fetch function
+
 function fetchWeather(url) {
   outputDiv.innerHTML = `<p>🌐 Fetching weather data...</p>`;
 
